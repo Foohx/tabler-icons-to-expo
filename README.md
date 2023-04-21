@@ -1,6 +1,6 @@
 # Tabler Icons to Expo
 
-Ce projet permet de convertir automatiquement la dernière version des icones de [tabler-icons](https://tabler-icons.io) dans un format utilisable par la fonction `createIconSet` de [@expo/vector-icons](https://docs.expo.dev/guides/icons/).
+This project automatically converts the latest version of [tabler-icons](https://tabler-icons.io) icons into a format that can be used by the `createIconSet` method of [@expo/vector-icons](https://docs.expo.dev/guides/icons/).
 
 ## Table of Contents
 
@@ -9,13 +9,13 @@ Ce projet permet de convertir automatiquement la dernière version des icones de
 
 ## Usage
 
-Pour utiliser tabler-icons dans votre projet, on va utiliser la fonction `createIconSet` présente dans le package [@expo/vector-icons](https://docs.expo.dev/guides/icons/) afin d'y ajouter un nouveau set d'icones.
+To use tabler-icons in your Expo project, we will use the `createIconSet` method provided by the [@expo/vector-icons](https://docs.expo.dev/guides/icons/) package to add a new set of icons.
 
-Pour commencer il faut ajouter les fichiers `glyph-map.json` et `tabler-icons.ttf` que vous pouvez trouver dans le dossier `output/` de ce repository.
+To begin with, you need to add the `glyph-map.json` and `tabler-icons.ttf` files that you can find in the `output/` directory of this repository.
 
-Pour cet exemple ils seront placés dans : `assets/tabler-icons/2.16.0/`
+For this example, they will be placed in `assets/tabler-icons/2.16.0/` of our project.
 
-On vient ensuite charger le fichier de font (ttf) dans notre `App.tsx|js` :
+Next, we have to load the font file (ttf) in our `App.tsx|js`:
 
 ```tsx
 // App.tsx
@@ -53,9 +53,9 @@ export default function App() {
 }
 ```
 
-Vous pouvez aussi utiliser le `useFonts` hook pour charger la font. Pour plus d'informations référez-vous à la [documentation](https://docs.expo.dev/versions/latest/sdk/font/).
+You can also use the `useFonts` hook to load the font. For more information, refer to the [documentation](https://docs.expo.dev/versions/latest/sdk/font/).
 
-On vient ensuite créer un composant TablerIcon (que vous pouvez nommer comme vous voulez) puis on l'export.
+Now, we will create a TablerIcon component (which you can name whatever you want) and then export it.
 
 ```tsx
 // tabler-icons.tsx
@@ -68,7 +68,7 @@ const TablerIcon = createIconSet(glyphMap, "tabler-icons", "tabler-icons.ttf");
 export default TablerIcon;
 ```
 
-Et voilà ! Vous pouvez maintenant utiliser votre nouveau composant ou vous souhaitez.
+And that's it! You can now use your new component wherever you want.
 
 ```tsx
 // MyScreen.tsx
@@ -88,23 +88,23 @@ Enjoy ! 😉
 
 ## Upgrade
 
-Pour mettre à jour [tabler-icons](https://tabler-icons.io) dans sa dernière version, ils vous suffit simplement de remplacer les fichiers `glyph-map.json` et `tabler-icons.ttf`.
+To update tabler-icons to its latest version, simply replace the `glyph-map.json` and `tabler-icons.ttf` files.
 
-Si la dernière version n'est pas disponible dans le dossier `output/` du repository vous pouvez les construire très facilement en clonant ce repo.
+If the latest version is not available in the `output/` folder of this repository, you can easily build them by cloning this repo.
 
-**Requirement :** Node `v18+`
+**Requirement:** Node `v18+`
 
 ```sh
 npm install
 ```
 
-Puis lancer la construction :
+Then run the build command:
 
 ```sh
 npm start
 ```
 
-Et si tout se passe bien vos fichiers seront disponibles dans le dossier `output/` :
+And if everything goes well, your files will be available in the `output/` directory:
 
 ```
 Downloading 2 files..
