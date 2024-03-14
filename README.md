@@ -1,3 +1,5 @@
+> **Note:** Starting from `v3`, tabler-icons now officially supports React Native. You no longer need to convert the icons manually. Simply install the package and follow the [documentation](https://tabler.io/docs/icons/react-native) to use the icons in your Expo project.
+
 # Tabler Icons to Expo
 
 This project automatically converts the latest version of [tabler-icons](https://tabler-icons.io) icons into a format that can be used by the `createIconSet` method of [@expo/vector-icons](https://docs.expo.dev/guides/icons/).
